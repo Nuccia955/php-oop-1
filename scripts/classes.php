@@ -7,16 +7,22 @@ class Movie {
     public $year;
     public $genre;
     public $weft;
+    public $favorite;
 
     //CONSTRUCT
-    function __construct($title, $genre, $weft)
+    function __construct($title, $genre, $weft, $favorite)
     {
         $this->title = $title;
         $this->genre = $genre;
         $this->weft = $weft;
+        $this->favourite = $favorite;
     }
 
     //METHODS
-    
+    public function addFavorite() {
+        if($this->favourite) {
+            return 'Favorite';
+        } //boolean
+    }
 }
 ?>
